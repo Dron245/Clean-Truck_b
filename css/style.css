@@ -619,6 +619,10 @@ h6 {
   }
 }
 
+.main__body-top {
+  position: relative;
+}
+
 .main__body-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -733,11 +737,10 @@ h6 {
   position: absolute;
   width: 1px;
   background: #fff;
-  bottom: 112px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -108%);
+      -ms-transform: translate(-50%, -108%);
+          transform: translate(-50%, -108%);
 }
 
 @supports (height: clamp( 6.0625rem , 2.4793221906rem  +  7.4651481745vw , 11.4375rem )) {
@@ -802,25 +805,17 @@ h6 {
   left: 50%;
   border-radius: 100%;
   background: white;
-  -webkit-transform: translateX(-37%) translateY(-63%);
-      -ms-transform: translateX(-37%) translateY(-63%);
-          transform: translateX(-37%) translateY(-63%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 
 .body-top__dotts-line {
   position: absolute;
-}
-
-@supports (top: clamp( 11.25rem , 0.0004882728rem  +  23.437093106vw , 28.125rem )) {
-  .body-top__dotts-line {
-    top: clamp( 11.25rem , 0.0004882728rem  +  23.437093106vw , 28.125rem );
-  }
-}
-
-@supports not (top: clamp( 11.25rem , 0.0004882728rem  +  23.437093106vw , 28.125rem )) {
-  .body-top__dotts-line {
-    top: calc(11.25rem + 16.875 * (100vw - 47.99875rem) / 72.00125);
-  }
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @supports (right: clamp( 1.25rem , -3.9997721394rem  +  10.9373101161vw , 9.125rem )) {
@@ -2079,10 +2074,6 @@ h6 {
     line-height: 1.5;
   }
 
-  .main__body-top {
-    position: relative;
-  }
-
   .main__body-bottom {
     margin-top: 0;
   }
@@ -2162,12 +2153,6 @@ h6 {
   .body-top__dotts .swiper-pagination-bullet:not(:last-child) {
     margin-bottom: 0;
     margin-right: 10px;
-  }
-
-  .body-top__dotts .swiper-pagination-bullet-active::after {
-    -webkit-transform: translate(-68%, -63%);
-        -ms-transform: translate(-68%, -63%);
-            transform: translate(-68%, -63%);
   }
 
   .body-top__dotts-line {
